@@ -1,39 +1,33 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
+@layer components {
+  .status__item {
+    @apply flex flex-col items-center space-y-2;
   }
-}
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: rgb(112, 76, 182);
-}
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+  .status__imgContainer {
+    @apply w-14 h-14 overflow-hidden rounded-full;
   }
-  50% {
-    transform: translateY(10px);
+  .status__img {
+    @apply object-cover;
   }
-  100% {
-    transform: translateY(0px);
+  .border__red {
+    @apply border border-red-500 p-0.5 rounded-full;
+  }
+  .icon {
+    @apply cursor-pointer rounded-full text-2xl;
+  }
+  .icon__post {
+    @apply text-2xl cursor-pointer;
+  }
+  .suggestions__footer {
+    @apply flex items-center;
+  }
+  .login__input {
+    @apply border p-2 text-xs outline-none;
+  }
+  .download__app {
+    @apply h-[2.5rem] w-[8rem] cursor-pointer;
   }
 }

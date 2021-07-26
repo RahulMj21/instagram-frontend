@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .status__item {
+    @apply flex flex-col items-center space-y-2;
+  }
+  .status__imgContainer {
+    @apply w-14 h-14 overflow-hidden rounded-full;
+  }
+  .status__img {
+    @apply object-cover;
+  }
+  .border__red {
+    @apply border border-red-500 p-0.5 rounded-full;
+  }
+  .icon {
+    @apply cursor-pointer rounded-full text-2xl;
+  }
+  .icon__post {
+    @apply text-2xl cursor-pointer;
+  }
+  .suggestions__footer {
+    @apply flex items-center;
+  }
+  .login__input {
+    @apply border p-2 text-xs outline-none;
+  }
+  .download__app {
+    @apply h-[2.5rem] w-[8rem] cursor-pointer;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.rounded__imageContainer {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.rounded__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
